@@ -1,0 +1,36 @@
+.container {
+  max-width: 70%;
+  margin: 60px auto;
+}
+
+.service__intro {
+  column-count: 2;
+  column-gap: 60px;
+  text-align: justify;
+}
+
+.accordion {
+  margin-top: 30px;
+}
+
+.accordion__head {
+  display: flex;
+  cursor: pointer;
+  min-height: 40px;
+  margin-top: 10px;
+  user-select: none;
+  padding: 10px 20px;
+  align-items: center;
+  border: solid 1px gray;
+  border-radius: 10px 10px 0 0;
+  justify-content: space-between;
+}
+
+.accordion .show {
+  display: flex;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  border: solid 1px gray;
+  border-radius: 0 0 10px 10px;
+}

@@ -1,0 +1,133 @@
+.cover {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+}
+
+.cover-full {
+  height: 100vh;
+}
+
+.cover__image {
+  width: 50%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: width 1.2s ease;
+}
+
+.cover__image-full {
+  width: 100%;
+}
+
+.cover-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.cover__image-full {
+  width: 100%;
+  display: flex;
+}
+
+.cover__image-full .discover {
+  display: none;
+}
+
+.cover__image-full .cover-back {
+  display: block;
+}
+
+.cover__image::before {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  filter: blur(5px);
+  position: absolute;
+  background: inherit;
+}
+
+#pool {
+  transform: scaleX(-1);
+  background-size: cover;
+  background-position: 25% 60%;
+  transition: all 1s ease;
+  background-repeat: no-repeat no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(https://images.unsplash.com/photo-1600965962361-9035dbfd1c50?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.background-flipped {
+  background-color: #9d9d9d;
+  background-image: none !important;
+}
+
+.cover-back {
+  display: none;
+}
+
+#hospital {
+  transform: scaleX(-1);
+  background-size: cover;
+  transition: all 1s ease;
+  background-position: 1% 60%;
+  background-repeat: no-repeat no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://comlite.it/wp-content/uploads/2019/10/sistemi-tv-in-sanit.jpg);
+}
+
+.cover__title {
+  color: white;
+  font-size: 3.5vw;
+  width: min-content;
+  letter-spacing: 4px;
+  font-weight: normal;
+}
+
+.cover__title:nth-child(1),
+.discover {
+  transform: scaleX(-1);
+}
+
+.discover {
+  width: 180px;
+  padding: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: right;
+  margin-left: -30px;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.discover i {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.cover__arrow {
+  left: 50%;
+  bottom: 30px;
+  color: white;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.cover__button {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  border: solid 1px white;
+  background-color: transparent;
+}
+
+.cover__icon {
+  height: 15px;
+  color: white;
+  font-size: 24px;
+}
