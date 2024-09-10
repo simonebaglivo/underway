@@ -1,23 +1,24 @@
 footer {
   display: flex;
   padding: 20px;
-  color: white;
   min-height: 250px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   width: calc(100% - 40px);
-  background-color: #454545;
+  background-color: #2f4156;
 }
 
 footer > p {
   margin: 30px 0;
   font-size: 24px;
+  color: #f5efeb;
 }
 
 .footer__contacts label {
   margin: 10px 0;
   display: block;
+  color: #f5efeb;
 }
 
 .footer__contacts input {
@@ -26,12 +27,13 @@ footer > p {
 
 .footer__contacts button {
   width: 100%;
-  color: rgb(46, 46, 46);
   display: block;
+  font-size: 14px;
   margin-top: 15px;
   margin-left: auto;
   padding: 10px 20px;
-  background-color: #d8d18f;
+  text-transform: uppercase;
+  background-color: #c8d9e6;
 }
 
 footer hr {

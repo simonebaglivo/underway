@@ -1,13 +1,29 @@
 @font-face {
-  font-family: "Georgia"; /* Name your font family */
-  src: url("./assets/georgia.ttf"); /* Locate the .ttf file within your directory*/
+  font-family: "Garamond"; /* Name your font family */
+  src: url("./assets/garamond.ttf"); /* Locate the .ttf file within your directory*/
+}
+
+@font-face {
+  font-family: "Garabold"; /* Name your font family */
+  src: url("./assets/garabold.ttf"); /* Locate the .ttf file within your directory*/
+}
+
+@font-face {
+  font-family: "Semibold"; /* Name your font family */
+  src: url("./assets/semibold.ttf"); /* Locate the .ttf file within your directory*/
+}
+
+@font-face {
+  font-family: "Elza"; /* Name your font family */
+  src: url("./assets/Elza.otf"); /* Locate the .ttf file within your directory*/
 }
 
 * {
   margin: 0;
   border: 0;
   padding: 0;
-  font-family: "Georgia", sans-serif;
+  color: #2f4156;
+  font-family: "Garamond", sans-serif;
 }
 
 textarea {
@@ -21,6 +37,11 @@ textarea {
 
 .flex-right {
   justify-content: right;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
 
 .ml-auto {
@@ -43,6 +64,10 @@ textarea {
   margin-right: 20px;
 }
 
+.mr-45 {
+  margin-right: 45px;
+}
+
 .r-80 {
   right: -80px;
 }
@@ -61,4 +86,13 @@ textarea {
 
 .pointer {
   cursor: pointer;
+}
+
+.break__line {
+  column-count: 2;
+  column-gap: 60px;
+}
+
+.text-justify {
+  text-align: justify;
 }

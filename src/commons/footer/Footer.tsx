@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <p>CONTATTAMI</p>
+        <p id="contacts">CONTATTAMI</p>
         <div className="footer__contacts">
           <label htmlFor="nome"> Nome: </label>
           <input type="text" name="nome" id="nome" />

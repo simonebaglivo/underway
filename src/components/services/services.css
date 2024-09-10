@@ -9,14 +9,20 @@
   align-items: center;
 }
 
+.scroll-animation {
+  animation-iteration-count: 1;
+  animation: 1s ease-out 0s 1 slideUpFromBottom;
+}
+
 .history {
   flex: 2;
   display: flex;
+  font-size: 18px;
   justify-content: right;
 }
 
 .services__banners {
-  flex: 5;
+  flex: 7 1;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -56,9 +62,10 @@ div.services__circle span {
   width: 80px;
   height: 80px;
   display: flex;
+  color: #2f4156;
   border-radius: 5%;
-  align-items: center;
   position: absolute;
+  align-items: center;
   justify-content: center;
   border: solid 1px #878686;
   transform: translate(-50%, -50%);
@@ -66,5 +73,32 @@ div.services__circle span {
 
 .services__description {
   text-align: justify;
-  max-width: calc(100% - 80px);
+  max-width: calc(100% - 100px);
+}
+
+.services-mobile {
+  display: flex;
+  margin: 0 30px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-mobile .services__circle {
+  display: none;
+}
+
+.history-mobile {
+  display: flex;
+  margin: 20px 0;
+  font-size: 22px;
+  justify-content: center;
+}
+
+@keyframes slideUpFromBottom {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

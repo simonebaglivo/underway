@@ -3,12 +3,6 @@
   margin: 60px auto;
 }
 
-.service__intro {
-  column-count: 2;
-  column-gap: 60px;
-  text-align: justify;
-}
-
 .accordion {
   margin-top: 30px;
 }
@@ -22,15 +16,29 @@
   padding: 10px 20px;
   align-items: center;
   border: solid 1px gray;
+  background-color: #f5efeb;
   border-radius: 10px 10px 0 0;
   justify-content: space-between;
 }
 
 .accordion .show {
   display: flex;
+  overflow-y: auto;
+  max-height: 500px;
   padding: 10px 20px;
   margin-bottom: 20px;
   align-items: center;
   border: solid 1px gray;
+  /* background-color: #c8d9e6; */
   border-radius: 0 0 10px 10px;
+  transition: max-height 1s ease-out;
+}
+
+.h-0 {
+  max-height: 0;
+  transition: all 0.5s ease-out;
+}
+
+.h-0 span {
+  display: none;
 }

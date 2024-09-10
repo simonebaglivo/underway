@@ -7,17 +7,20 @@ import MenuItems from "./MenuItems";
 import MenuMobile from "./MenuMobile";
 
 // Importing: Hooks.
-import useIsMobile from "../isMobileHook";
+import useIsTablet from "../isTabletHook";
 
 // Importing: Styles.
 import "./menu.css";
 
 export default function Menu() {
-  const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
+  const { href } = window.location;
   const [navClass, setNavClass] = React.useState("menu");
+  const isService = href.includes("hospital") || href.includes("pool");
 
   const onScroll = () => {
-    if (window.scrollY >= 200) return setNavClass("menu scrolled");
+    const maxHeight = isService ? 120 : 200;
+    if (window.scrollY >= maxHeight) return setNavClass("menu scrolled");
     return setNavClass("menu");
   };
 
@@ -28,7 +31,7 @@ export default function Menu() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (isMobile) return <MenuMobile />;
+  if (isTablet) return <MenuMobile />;
 
   return (
     <>

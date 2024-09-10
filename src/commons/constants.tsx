@@ -87,6 +87,17 @@ export const servicesDetails = [
   },
 ];
 
-export const menuItems = ["", "servizi", "chi siamo", "contatti"];
+export const menuItems = [
+  { text: "", to: "/#home" },
+  { text: "servizi", to: "" },
+  { text: "chi siamo", to: "/#history" },
+  { text: "contatti", to: "#contacts" },
+];
 
-
+export const tabletItems = [
+  { text: "", to: "" },
+  { text: "servizi tv ospedalieri", to: "/hospital" },
+  { text: "riprese subacquee", to: "/hospital" },
+  { text: "chi siamo", to: "/#history" },
+  { text: "contatti", to: "#contacts" },
+];
