@@ -1,10 +1,12 @@
+@import url(../../colors.css);
+
 .container {
   max-width: 70%;
   margin: 60px auto;
 }
 
 .accordion {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .accordion__head {
@@ -15,23 +17,27 @@
   user-select: none;
   padding: 10px 20px;
   align-items: center;
-  border: solid 1px gray;
-  background-color: #f5efeb;
   border-radius: 10px 10px 0 0;
   justify-content: space-between;
+  background-color: var(--beige);
+}
+
+.accordion__shadow {
+  border-radius: 15px;
+  box-shadow: 1px 1px 13px 5px #eeeae5;
 }
 
 .accordion .show {
   display: flex;
-  overflow-y: auto;
   max-height: 500px;
-  padding: 10px 20px;
+  overflow-y: hidden;
+  padding: 30px 60px;
   margin-bottom: 20px;
   align-items: center;
-  border: solid 1px gray;
-  /* background-color: #c8d9e6; */
+  text-align: justify;
   border-radius: 0 0 10px 10px;
-  transition: max-height 1s ease-out;
+  /* background-color: var(--white); */
+  transition: max-height 1.5s ease-out;
 }
 
 .h-0 {
@@ -39,6 +45,69 @@
   transition: all 0.5s ease-out;
 }
 
-.h-0 span {
+.h-0 div {
   display: none;
+}
+
+.binary {
+  position: relative;
+}
+
+.binary__head {
+  padding: 60px;
+  height: 425px;
+  display: flex;
+  margin: 30px 0;
+  font-size: 40px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lightblue);
+}
+
+.break .topshape {
+  top: 0;
+}
+
+.break .bottomshape {
+  bottom: 0;
+}
+
+.binary-large {
+  margin: 160px 0;
+}
+
+.binary-large .topshape {
+  top: -100px;
+}
+
+.binary-large .bottomshape {
+  bottom: -190px;
+}
+
+.binary-large .binary__head {
+  height: 625px;
+  font-size: 48px;
+  margin-top: 60px;
+}
+
+.topshape {
+  left: 0;
+  top: -55px;
+  width: 100%;
+  position: absolute;
+  transform: rotate(180deg);
+}
+
+.bottomshape {
+  position: absolute;
+  bottom: -55px;
+  width: 100%;
+  left: 0;
+}
+
+.m-negative {
+  z-index: 2;
+  margin-top: -60px;
+  position: relative;
 }

@@ -11,40 +11,44 @@ import { servicesDetails } from "../../commons/constants";
 
 export default function Services() {
   const isTablet = useIsTablet();
-  const historyClass = isTablet ? "history-mobile" : "history";
 
   // Declaring States.
   const [servicesClass, setServicesClass] = React.useState("services");
 
   const onScroll = () => {
-    if (servicesClass === "services" && isTablet) {
-      setServicesClass("services-mobile");
-      return;
-    }
+    const defaultServices = isTablet ? "services-mobile" : "services";
 
     if (window.scrollY >= 60) {
-      return setServicesClass("services scroll-animation");
+      return setServicesClass(`${defaultServices} scroll-animation`);
     }
-
-    return setServicesClass("services");
   };
+
+  React.useEffect(() => {
+    const defaultServices = isTablet ? "services-mobile" : "services";
+    setServicesClass(defaultServices);
+  }, [isTablet]);
 
   React.useEffect(() => {
     window.removeEventListener("scroll", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
-
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isTablet]);
+
+  const classes = [
+    "mr-auto ml10",
+    "ml-auto mr15",
+    "mr-auto ml20",
+    "ml-auto mr10",
+  ];
 
   return (
     <>
       <div className={servicesClass} id="history">
-        <div className={historyClass}>La mia storia</div>
         <div className="services__banners">
           {servicesDetails.map((item, index) => (
-            <div key={index} className="services__detail">
+            <div key={index} className={`services__detail ${classes[index]}`}>
               {item.image}
-            <div className="services__description ml-auto mr-45">
+              <div className="services__description ml-auto mr-45">
                 {item.copy}
               </div>
             </div>

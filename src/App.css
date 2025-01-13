@@ -1,3 +1,5 @@
+@import url(./colors.css);
+
 @font-face {
   font-family: "Garamond"; /* Name your font family */
   src: url("./assets/garamond.ttf"); /* Locate the .ttf file within your directory*/
@@ -22,7 +24,7 @@
   margin: 0;
   border: 0;
   padding: 0;
-  color: #2f4156;
+  color: var(--main);
   font-family: "Garamond", sans-serif;
 }
 
@@ -68,12 +70,8 @@ textarea {
   margin-right: 45px;
 }
 
-.r-80 {
-  right: -80px;
-}
-
-.l-10 {
-  left: 10px;
+.l-0 {
+  left: 0;
 }
 
 .w-0 div {
@@ -95,4 +93,32 @@ textarea {
 
 .text-justify {
   text-align: justify;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.ml10 {
+  margin-left: 10%;
+}
+
+.ml20 {
+  margin-left: 20%;
+}
+
+.mr10 {
+  margin-right: 10%;
+}
+
+.mr15 {
+  margin-right: 15%;
+}
+
+.mr5 {
+  margin-right: 5%;
 }

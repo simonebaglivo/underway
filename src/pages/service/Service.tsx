@@ -1,10 +1,8 @@
-import React from "react";
-
 // Importing: Styles.
 import "./service.css";
 
 // Importing: Copy.
-import { service } from "../../copy";
+import { service, service2, service3 } from "../../copy";
 
 // Importing: Router.
 import { useLocation } from "react-router-dom";
@@ -13,66 +11,64 @@ import { useLocation } from "react-router-dom";
 import Cover from "../../components/cover/Cover";
 
 // Importing: Hooks.
-import useIsMobile from "../../commons/isTabletHook";
+import useIsXl from "../../commons/isXlHook";
+import useIsTablet from "../../commons/isTabletHook";
 
-// Importing: Constants.
-import { accordionItems } from "../../commons/constants";
-
-// Importing: Icons.
-import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
-
-// Importing: FontAwesome.
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// Importing: Commons.
 import Menu from "../../commons/menu/Menu";
 import Footer from "../../commons/footer/Footer";
+import Section from "../../components/section/Section";
+
+// Importing: Constants.
+import { binaryItems, subItems } from "../../commons/constants";
 
 export default function Service({ id }: ServiceInterface) {
-  const isMobile = useIsMobile();
+  const isXl = useIsXl();
+  const isTablet = useIsTablet();
   const { state } = useLocation();
-  const introClass = isMobile ? "text-justify" : "text-justify break__line";
-  const [accordion, setAccordion] = React.useState([true, false, false, false]);
 
-  const getHeading = (item: accordionItemInterface, index: boolean) => {
-    const heading = (
-      <>
-        <span>{item.title}</span>
-        <FontAwesomeIcon icon={index ? faArrowUp : faArrowDown} />
-      </>
-    );
-
-    return heading;
-  };
-
-  const onAccordionClick = (index: number) => {
-    const newAccordion = accordion;
-    newAccordion[index] = !accordion[index];
-    setAccordion([...newAccordion]);
+  const getAnimationClass = () => {
+    if (isTablet) return "binary break";
+    if (isXl) return "binary binary-large";
+    return "binary";
   };
 
   return (
     <>
       <Menu />
       <Cover id={id || state.id} />
+      <Section copy={service} items={subItems} />
 
-      <div className="container">
-        <div className={introClass}>{service}</div>
-        <div className="accordion">
-          {accordionItems.map((item, index) => (
-            <div key={item.title}>
-              <div
-                className="accordion__head"
-                onClick={() => onAccordionClick(index)}
-              >
-                {getHeading(item, accordion[index])}
-              </div>
-
-              <p className={accordion[index] ? "show" : "h-0"}>
-                <span>{item.content}</span>
-              </p>
-            </div>
-          ))}
+      <div className={getAnimationClass()}>
+        <svg
+          className="topshape"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,128L30,133.3C60,139,120,149,180,138.7C240,128,300,96,360,117.3C420,139,480,213,540,234.7C600,256,660,224,720,181.3C780,139,840,85,900,74.7C960,64,1020,96,1080,101.3C1140,107,1200,85,1260,80C1320,75,1380,85,1410,90.7L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+          ></path>
+        </svg>
+        <div className="binary__head">
+          <svg
+            className="bottomshape"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#fff"
+              fill-opacity="1"
+              d="M0,64L48,58.7C96,53,192,43,288,74.7C384,107,480,181,576,176C672,171,768,85,864,64C960,43,1056,85,1152,106.7C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+          BINARI SUBACQUEI
         </div>
       </div>
+
+      <Section copy={service2} negative items={binaryItems} />
+      <Section copy={service3} items={[]} />
       <Footer />
     </>
   );
@@ -80,9 +76,4 @@ export default function Service({ id }: ServiceInterface) {
 
 interface ServiceInterface {
   id: string;
-}
-
-interface accordionItemInterface {
-  title: string;
-  content: string;
 }

@@ -1,3 +1,5 @@
+@import url(./colors.css);
+
 @media (max-width: 1024px) {
   .cover {
     flex-direction: column;
@@ -92,7 +94,7 @@
   border-radius: 50%;
   align-items: center;
   flex-direction: column;
-  background-color: #78b2cb;
+  background-color: var(--secondary);
 }
 
 .nav-container .hamburger-lines .line {
@@ -126,7 +128,7 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  color: #dbf2ff;
+  color: var(--light);
   text-align: center;
   align-items: center;
   flex-direction: column;
@@ -155,7 +157,7 @@
 .navbar .nav-container a {
   padding: 0.7rem;
   font-weight: 500;
-  color: #dbf2ff;
+  color: var(--light);
   font-size: 1.4rem;
   text-decoration: none;
 }

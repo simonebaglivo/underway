@@ -57,7 +57,7 @@
   transition: all 1s ease;
   background-position: 25% 60%;
   background-repeat: no-repeat no-repeat;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
+  animation: 1s ease-out 0s 1 appearance;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(https://images.unsplash.com/photo-1600965962361-9035dbfd1c50?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
@@ -74,7 +74,7 @@
   background-position: 1% 60%;
   animation-iteration-count: 1;
   background-repeat: no-repeat no-repeat;
-  animation: 1s ease-out 0s 1 slideInFromRight;
+  animation: 1s ease-out 0s 1 appearance;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://comlite.it/wp-content/uploads/2019/10/sistemi-tv-in-sanit.jpg);
 }
@@ -97,12 +97,12 @@
   /* transform: scaleX(-1); */
 }
 
-@keyframes slideInFromLeft {
+@keyframes appearance {
   0% {
-    transform: translateX(50%);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 

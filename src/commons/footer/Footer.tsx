@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <p id="contacts">CONTATTAMI</p>
+        <p id="contacts">RICHIEDI UN PREVENTIVO</p>
         <div className="footer__contacts">
           <label htmlFor="nome"> Nome: </label>
           <input type="text" name="nome" id="nome" />

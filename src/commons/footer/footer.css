@@ -1,3 +1,5 @@
+@import url(../../colors.css);
+
 footer {
   display: flex;
   padding: 20px;
@@ -6,19 +8,19 @@ footer {
   flex-direction: column;
   justify-content: center;
   width: calc(100% - 40px);
-  background-color: #2f4156;
+  background-color: var(--main);
 }
 
 footer > p {
   margin: 30px 0;
   font-size: 24px;
-  color: #f5efeb;
+  color: var(--beige);
 }
 
 .footer__contacts label {
   margin: 10px 0;
   display: block;
-  color: #f5efeb;
+  color: var(--beige);
 }
 
 .footer__contacts input {
@@ -33,7 +35,7 @@ footer > p {
   margin-left: auto;
   padding: 10px 20px;
   text-transform: uppercase;
-  background-color: #c8d9e6;
+  background-color: var(--lightblue);
 }
 
 footer hr {

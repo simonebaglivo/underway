@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function useIsTablet() {
+export default function useIsXl() {
   const [width, setWidth] = React.useState(window.innerWidth);
 
   function handleWindowSizeChange() {
@@ -15,5 +15,5 @@ export default function useIsTablet() {
     };
   }, []);
 
-  return width <= 1024;
+  return width >= 1560;
 }
