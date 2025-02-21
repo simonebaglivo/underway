@@ -66,7 +66,7 @@ interface accordionItemInterface {
 }
 
 interface SectionInterface {
-  copy: string;
   negative?: boolean;
+  copy: string | JSX.Element;
   items: accordionItemsInterface[];
 }

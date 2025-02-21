@@ -87,6 +87,107 @@ export const subItems = [
   },
 ];
 
+export const hospitalItems = [
+  {
+    title: "Qual è il suo scopo?",
+    content: (
+      <>
+        L'obiettivo principale è fornire servizi aggiuntivi ai pazienti
+        ricoverati all'interno di Strutture Ospedaliere. Ma il monitor può anche
+        essere utilizzato per visualizzare e pubblicizzare i servizi interni
+        offerti dall'ospedale. <br /> <br />
+        Sui monitor dei pazienti possono essere visualizzati messaggi
+        informativi di vario genere, come ad esempio:
+        <br /> <br />
+        <ul>
+          <li>Orari e servizi per il pubblico</li>
+          <li>Menu dei pasti previsti giornalmente o settimanalmente</li>
+          <li>Orari delle funzioni religiose</li>
+          <li>Comunicazioni personali per il singolo paziente</li>
+          <li>Informazioni e messaggi pubblicitari</li>
+          <li>Servizi e informazioni di pubblica utilità</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    title: "Di quali servizi dispone?",
+    content: (
+      <>
+        Tramite un menu interattivo a video su ciascun monitor paziente, risulta
+        possibile la scelta dei seguenti servizi:
+        <br />
+        <br />
+        <ul>
+          <li>TV Digitale Terrestre nelle Bande S, VHF ​e UHF del DVB-T2</li>
+          <li>TV Satellitare, sia in chiaro che a pagamento ​​</li>
+          <li>Servizi Telefonici</li>
+          <li>Servizi Internet</li>
+          <li>
+            Videogiochi contenuti gratuitamente all’interno dell’archivio
+            centrale (in alternativa il paziente può usufruire di una porta
+            dedicata per collegare una sua consolle)
+          </li>
+          <li>
+            Video On Demand da un archivio interno proprietario appositamente
+            predisposto
+          </li>
+          <li>
+            Videoconferenze e videochiamate con i propri famigliari a casa o
+            dall’atrio dell’ospedale{" "}
+          </li>
+        </ul>
+        <br />
+        ​Per la distribuzione e l’invio del segnale televisivo a ciascun
+        paziente viene utilizzato l’impianto strutturato di trasmissione dati
+        interno, nella maggioranza dei casi preesistente. Questa soluzione offre
+        il vantaggio di poter rendere operativo l’impianto anche in edifici non
+        appositamente attrezzati e successivamente alla loro realizzazione.
+      </>
+    ),
+  },
+  {
+    title: "Quali sono i requisiti necessari per l'utilizzo di questo sistema?",
+    content: (
+      <>
+        L’unica condizione posta è la presenza di un cablaggio strutturato Cat.
+        5e per la distribuzione dei servizi informatici all’interno
+        dell’edificio. Viene richiesto un minimo di 100 MHz di banda.
+      </>
+    ),
+  },
+  {
+    title: "Come avviene la visione dei programmi?",
+    content: (
+      <>
+        Ci sono due modalità principali:
+        <br />
+        <br />
+        1. Su un monitor di grande formato ancorato alla parete antistante il
+        letto del paziente;
+        <br />
+        2. Su un monitor di medio formato montato su un braccio meccanico
+        estensibile a 5 gradi di libertà ancorato alla parete della testata del
+        letto che, grazie ai suoi snodi, consente il posizionamento dello
+        schermo proprio davanti al paziente sdraiato alla distanza desiderata.
+      </>
+    ),
+  },
+  {
+    title: "Come avviene il pagamento dei servizi?",
+    content: (
+      <>
+        L'addebito può avvenire sia localmente - con lettori di badge prepagati
+        e un'indicazione a video del credito residuo - che in modo
+        centralizzato. Con i lettori di badge il sistema emette uno scontrino al
+        momento dell’acquisto attestante il servizio acquistato; con la versione
+        centralizzata si può ottenere anche la stampa dettagliata dei servizi di
+        cui si è usufruito.
+      </>
+    ),
+  },
+];
+
 export const binaryItems = [
   {
     title: "A quali tipi di vasche è adatta?",
@@ -104,10 +205,61 @@ export const binaryItems = [
   },
 ];
 
+export const multiItems = [
+  {
+    title: "Posso vedere anche dei programmi pre-registrati?",
+    content: (
+      <>
+        Sì, sul monitor sono presenti programmi televisivi e filmati in “Video
+        on Demand”, di generi diversi, contenuti in un archivio centrale ed
+        accessibile digitando sul monitor (nella versione Touch Screen) o sul
+        telecomando il codice del programma desiderato. Viene fornito ai degenti
+        un elenco con i codici dei programmi contenuti in un archivio che viene
+        costantemente aggiornato.​​
+      </>
+    ),
+  },
+  {
+    title: "Come vengono gestite le chiamate?",
+    content: (
+      <>
+        È possibile sia effettuare che ricevere chiamate in selezione passante
+        direttamente tramite lo schermo del monitor utilizzando l’apposito menu
+        a video oppure utilizzando l’apparecchio telefonico collocato di fianco
+        al monitor stesso. Il sistema prevede un avviso acustico e luminoso in
+        presenza di una telefonata in arrivo. Dopo le ore 20.00 la segnalazione
+        è solamente luminosa. <br /> <br />
+        Nel caso di utilizzo del monitor come postazione telefonica di base,
+        l’ascolto e la conversazione avvengono direttamente tramite il
+        particolare telecomando in dotazione. Per garantire la necessaria
+        riservatezza della conversazione, è anche possibile usufruire di cuffie
+        dotate di microfono.
+      </>
+    ),
+  },
+  {
+    title: "Come funzionano le videochiamate?",
+    content: (
+      <>
+        Sul monitor si trova integrata una telecamera plurifunzione che può
+        essere utilizzata per effettuare collegamenti in videoconferenza con i
+        colleghi d’ufficio o videochiamate con i propri famigliari, da casa o
+        dagli appositi totem multimediali predisposti all’interno dell’ospedale.
+        <br /> <br />
+        ​Questa soluzione consente una notevole riduzione del flusso di
+        visitatori all’interno della struttura ospitante e dei singoli reparti,
+        con gli indubbi vantaggi logistici ed organizzativi per le
+        Amministrazioni Ospedaliere. Contemporaneamente vengono abbattuti i
+        costi di soggiorno che i famigliari devono sostenere trattandosi spesso
+        di pazienti provenienti da altre regioni.
+      </>
+    ),
+  },
+];
+
 export const servicesDetails = [
   {
     copy: underHistory,
-
     image: <div className="services__circle mr-auto l-0">SCOPRI</div>,
   },
   {
